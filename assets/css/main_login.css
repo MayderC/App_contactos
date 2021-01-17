@@ -76,14 +76,24 @@ h1{
 
 .contact{
     border-radius: 5px;
-    height: 150px;
-    width: 200px;
+    height: 210px;
+    width: 215px;
     color: aliceblue;
     background-color: #6730E6;
     margin: 15px;
     padding: 5px;
 }
 
-label{
+label:not(){
     padding-top: 20px;
+}
+
+.invisible{
+    visibility: visible;
+}
+
+.cerrar_session{
+    position: absolute;
+    top: 40px;
+    left: 40px;
 }

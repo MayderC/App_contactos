@@ -22,7 +22,7 @@ CREATE TABLE `contactos` (
   PRIMARY KEY (`id_contacto`),
   KEY `fk_usuario_key` (`id_usuario`),
   CONSTRAINT `fk_usuario_key` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 DROP TABLE IF EXISTS `usuarios`;
@@ -31,11 +31,11 @@ CREATE TABLE `usuarios` (
   `email_usuario` varchar(40) NOT NULL,
   `nombre_usuario` varchar(30) NOT NULL,
   `contrasena` varchar(20) NOT NULL,
-  `fecha_creacion` datetime NOT NULL DEFAULT current_timestamp(),
+  `fecha_creacion` datetime DEFAULT current_timestamp(),
   `tipo_usuario` varchar(20) DEFAULT 'Usuario',
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `email_usuario` (`email_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 CREATE OR REPLACE VIEW `v_lista_usuarios` AS (select `usuarios`.`id_usuario` AS `id_usuario`,`usuarios`.`email_usuario` AS `email_usuario`,`usuarios`.`nombre_usuario` AS `nombre_usuario`,`usuarios`.`contrasena` AS `contrasena`,`usuarios`.`fecha_creacion` AS `fecha_creacion`,`usuarios`.`tipo_usuario` AS `tipo_usuario` from `usuarios`);

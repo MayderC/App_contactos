@@ -36,6 +36,7 @@ if (isset($_SESSION['current_usuer'])) {
             <p class="lista__p">Lista de contactos</p>
         </div>
     </div>
+    <a class="cerrar_session" href="http://localhost/web/practica/media/views/cerrarSession.php"><img src="../assets/img/cancel.svg" alt="" srcset=""></a>
     <div class="content">
         <aside class="header">
             <div class="header__top">
@@ -66,7 +67,6 @@ if (isset($_SESSION['current_usuer'])) {
 </main>
 
 
-<a href="http://localhost/web/practica/media/views/cerrarSession.php">Cerrar session</a>
 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
