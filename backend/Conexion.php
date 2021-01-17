@@ -1,18 +1,18 @@
 <?php 
 
 class Conexion{
-    private $host;
-    private $user;
-    private $pass; 
-    private $dbname;
-    private $conn;
+    private string  $host;
+    private string  $user;
+    private string  $pass;
+    private string  $dbname;
+    private PDO     $conn;
 
 
     public function __construct(){
-        $this->host = "localhost";
-        $this->user = "root";
-        $this->pass = "";
-        $this->dbname = "app_contactos";
+        $this->host     = "localhost";
+        $this->user     = "root";
+        $this->pass     = "";
+        $this->dbname   = "app_contactos";
     }
 
     protected function conectar(): PDO
@@ -35,10 +35,10 @@ class Conexion{
 
     }
     
-    protected function desconectar(){
 
-        $this->conn = null;
-    
+    function __destruct()
+    {
+        // TODO: Implement __debugInfo() method.
     }
 
 }

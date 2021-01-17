@@ -1,43 +1,89 @@
-.window{
-    width: 100%;
-    height: 100vh;
-    background-color: #773333;
-    color: aliceblue;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body{
+    background-color: #3A1199;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.titulo__login{
-    font-size: 4vw;
+h1{
+    font-weight: 800;
 }
 
 .main{
-    width: 40%;
-    height: 70%;
-}
-
-.input{
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    width: 100%;
 }
 
-.btn__send{
+.content{
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0px;
+    width: 100%;
+    justify-content: center;
 }
 
-.registro{
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
+.header{
+    width: 40%;
 }
 
-.registro:hover{
+.header__top__title{
+    display: flex;
+    width: 100%;
     color: aliceblue;
-    
+    margin-top: 25px;
+}
+
+.titulo{
+    text-align: center;
+    width:40%;
+}
+
+.lista{
+    text-align: left;
+    font-size: 35px;
+    width: 60%;
+}
+
+.lista__p{
+    font-weight: 800;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__container__item{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+
+}
+
+.form__container__item--btn{
+    margin-top: 20px;
+    float: right;
+}
+
+.padre{
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.contact{
+    border-radius: 5px;
+    height: 150px;
+    width: 200px;
+    color: aliceblue;
+    background-color: #6730E6;
+    margin: 15px;
+    padding: 5px;
+}
+
+label{
+    padding-top: 20px;
 }

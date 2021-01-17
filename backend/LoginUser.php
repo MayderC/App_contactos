@@ -2,7 +2,7 @@
 require_once 'Conexion.php';
 
 class LoginUser extends Conexion{
-    private $conn;
+    private PDO $conn;
     function __construct(){
         parent::__construct();
         $this->conn = parent::conectar();
@@ -28,8 +28,7 @@ class LoginUser extends Conexion{
                     //le cambiamos el valor a la contraseña del objeto anonimo a "" string vacio, antes de retornarlo
                     $rs->contrasena = "";
                     return $rs;
-    
-                } 
+                }
             }else {
                 //si no hay nada y no coinciden retornamos false
 

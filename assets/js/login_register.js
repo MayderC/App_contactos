@@ -17,7 +17,7 @@ function login(email, pass){
 
     axios({
         method:'POST',
-        url: 'http://localhost/web/practica/media/backend/checkLogin.php',
+        url: 'http://127.0.0.1/web/practica/media/backend/checkLogin.php',
         data: {
             email: email,
             pass: pass
@@ -35,8 +35,8 @@ function login(email, pass){
 
 function  goHome(datos){
     let data= datos;
-    console.log(data);
+    console.log(data);5
     if(data.user){
-        window.location.href = "http://localhost/web/practica/media/views/home.php";
+        window.location.href = "http://127.0.0.1/web/practica/media/views/home.php";
     }
 }

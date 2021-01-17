@@ -6,99 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="./assets/css/main.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main_login.css">
 
     <title>App contact</title>
 </head>
 
 <body>
 
+<?php
 
-    <main class="main_p">
-        <h1 class="main__title">Contact App</h1>
-        <div class="main">
-
-    
-            <?php
-
-            session_start();
-
-            if(isset($_SESSION['current_usuer'])){
-                echo "<h1>Tengo</h1> ";
-                echo $_SESSION['current_usuer']['fecha'];
-            }else{
-                echo "<h1>No tengo</h1> ";
-            }
+session_start();
 
 
-            $cont = 0;
-            $id_contact_html = "id__contacto_". $cont;
-    
-            for ($i = 0; $i < 2; $i++) {
-            ?>
-            <div class="main__cont">
-    
-                <div class="content">
-                    <div class="cntent__perfil">
-                    </div>
-        
-                    <div class="content__contact">
-        
-                        <div class="content__contact__name">
-                            <h2>Usuario <?php echo $i ?></h2>
-                        </div>
-        
-                        <div class="content__contact__info">
-                            <p>Mail: example@mail.com</p>
-                            <p>Telefono: 000 000 000</p>
-                        </div>
-        
-                        <div class="content__contact__btn">
-                            <p class="contact__btn-d">
-                                Eliminar
-                            </p>
-                            <p class="contact__btn-i">
-                                Editar
-                            </p>
-                        </div>
-        
-                    </div>
-        
+if (isset($_SESSION['current_usuer'])) {
+    echo "";
+} else {
+    header('Location: http://127.0.0.1/web/practica/media');
+}
+?>
+
+<main class="main">
+    <div class="header__top__title">
+        <div class="titulo">
+            <h1>App Contactos</h1>
+        </div>
+        <div class="lista">
+            <p class="lista__p">Lista de contactos</p>
+        </div>
+    </div>
+    <div class="content">
+        <aside class="header">
+            <div class="header__top">
+                <div class="header__top__img">
+                    <img src="" alt="">
                 </div>
-    
             </div>
-            
-    
-            <?php } ?>
+            <form class="form__container" action="">
+                <div class="form__container__item">
+                    <label  for="in_nombre_c">Nombre:</label><input class="form-control" type="text" name="nombre" id="in_nombre_c">
+                </div>
+                <div class="form__container__item">
+                    <label for="in_email_c">Email:</label><input class="form-control" type="text" name="email" id="in_email_c">
+                </div>
+                <div class="form__container__item">
+                    <label for="in_telefono_c">Telefono:</label><input class="form-control" type="text" name="telefono" id="in_telefono_c">
+                </div>
+                <div class="form__container__item--btn">
+                    <input class="btn btn-success" type="submit" value="Guardar">
+                </div>
+            </form>
+        </aside>
+        <div id="contact" class="padre">
 
-            <?php
-        session_destroy();
+        </div>
+    </div>
 
-        session_start();
-        
-        if (isset($_SESSION['current_usuer'])) {
-            echo "<h1>Tengo</h1> ";
-        } else {
-            echo "<h1>No tengo</h1> ";
-        }
-
-        echo "<h1>Hola</h1> "
-
-        ?>
-            </div>
-
-
-
-    </main>
+</main>
 
 
+<a href="http://localhost/web/practica/media/views/cerrarSession.php">Cerrar session</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../assets/js/home.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<?php
+echo '<script src="../assets/js/home.js"></script>';
+?>
 </body>
 
 </html>

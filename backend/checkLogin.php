@@ -1,12 +1,23 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+header('content-type: application/json; charset=utf-8');
+
+
 require_once('./LoginUser.php');
 
 
-// datos que vienen desde el frontend con axios. post
+
+    // datos que vienen desde el frontend con axios. post
+
 $data = json_decode(file_get_contents("php://input"), true);
 
-//Verificar que no hayan parametros vacios.
+
+
+    //Verificar que no hayan parametros vacios.
 if(!empty($data['email']) && !empty($data['pass'])){
     //validar datos
     $email = $data['email'];
@@ -42,19 +53,16 @@ if(!empty($data['email']) && !empty($data['pass'])){
             'fecha' =>  $rs->fecha_creacion,
             'tipo'  =>  $rs->tipo_usuario,
         );
+        crearSesion($rs);
+        echo json_encode($datos);
 
-         echo json_encode($datos);
-        
 
-        
-    }elseif($rs == false){
+    }elseif($rs != true){
         
         $no_data['data'] = false;
         echo json_encode($no_data);
         
     }
-}else{
-    echo "No hay datos";
 }
 
 
@@ -69,5 +77,3 @@ function crearSesion($usuario){
 }
 
 
-
-?>

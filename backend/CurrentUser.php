@@ -1,10 +1,10 @@
 <?php
 
 class CurrentUser{
-    private $email;
-    private $user;
-    private $tipo;
-    private $fecha;
+    private string $email;
+    private string $user;
+    private string $tipo;
+    private string $fecha;
 
     function __construct($email, $user, $tipo, $fecha){
         $this->email = $email;
@@ -14,7 +14,7 @@ class CurrentUser{
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getEmail()
     {
@@ -22,7 +22,7 @@ class CurrentUser{
     }
 
     /**
-     * @param mixed $email
+     * @param string $email
      */
     public function setEmail($email): void
     {
@@ -30,7 +30,7 @@ class CurrentUser{
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getUser()
     {
@@ -38,7 +38,7 @@ class CurrentUser{
     }
 
     /**
-     * @param mixed $user
+     * @param string $user
      */
     public function setUser($user): void
     {
@@ -46,7 +46,7 @@ class CurrentUser{
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getTipo()
     {
@@ -54,7 +54,7 @@ class CurrentUser{
     }
 
     /**
-     * @param mixed $tipo
+     * @param string $tipo
      */
     public function setTipo($tipo): void
     {
@@ -62,7 +62,7 @@ class CurrentUser{
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getFecha()
     {
@@ -70,7 +70,7 @@ class CurrentUser{
     }
 
     /**
-     * @param mixed $fecha
+     * @param string $fecha
      */
     public function setFecha($fecha): void
     {

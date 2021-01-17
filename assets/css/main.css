@@ -5,7 +5,7 @@ body{
     /* background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color:rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(50, 0, 116);
+    background-color: rgb(70, 20, 116);
 
 }
 
@@ -14,13 +14,15 @@ h1, h2, p{
     padding: 0;
 }
 
-.main_p{
+
+
+.window{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .main{
@@ -28,9 +30,6 @@ h1, h2, p{
     max-height: 70%;
     margin: auto;
     padding-bottom: 40px;
-
-    background-color:aliceblue;
-
     border-radius: 1px;
     display:flex;
     flex-direction: column;
@@ -38,62 +37,10 @@ h1, h2, p{
 
 }
 
-
-.main::-webkit-scrollbar {
-
-    display: none;  /* Ocultar scroll */
+.input{
+    margin-top: 20px;
 }
 
-.main__title{
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    margin: 0;
-
-}
-
-.main__cont{
-    padding: 40px;
-    padding-bottom: 0px;
-}
-
-.content{
-    background-color: rgb(94, 22, 189);
-    width: 100%;
-    border-radius: 1px;
-}
-
-
-
-
-.content__contact__name{
-    text-align: center;
-    padding-top: 10px;
-    color: aliceblue;
-}
-
-.content__contact__info{
-    font-size: 10px;
-    color: white;
-    padding: 10px;
-}
-.content__contact__info p{
-    margin: 10px;
-    font-size: 16px;
-}
-
-.contact__btn{
-    padding: 10px;
-}
-
-.content__contact__btn{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.content__contact__btn >p:hover{
-
-    text-decoration: underline;
-
+.btn__send{
+    margin-top: 20px;
 }

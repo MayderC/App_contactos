@@ -14,7 +14,7 @@
         <main class="main">
                 <h2 class="titulo__login">Login</h2>
             <div class="form">
-                <form action="./backend/guardar.php" method="post">
+                <form action="" method="post">
 
                     <div>
                         <label for="id_form_user">Usuario</label>
